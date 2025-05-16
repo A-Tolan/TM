@@ -44,3 +44,6 @@ _Richard Feynman_
 "Ainsi derniers seront les premiers et les premiers seront les derniers" 
 _Bible, Mathieu 20:16_
 
+"Seul deux choses sont infinies : l'univers et la bêtise humaine.
+Mais je ne suis pas sûr pour l'univers"
+_Albert Einstein_
