@@ -35,3 +35,12 @@
 > **Observation** :  
 > - Pour $\ f_2(x) $, le schéma explicite montre des oscillations non physiques (voir `explicite_solution_f2.png`), tandis que l’implicite et Crank-Nicholson restent stables.  
 > - Crank-Nicholson offre un meilleur compromis entre précision et stabilité, captant la discontinuité sans sur-lissage.
+
+## Citations connues 
+
+“Peu importe combien votre théorie est belle, peu importe votre intelligence, peu importe si vous êtes célèbre… Si votre théorie n'est pas en accord avec l'expérience, elle est fausse. C'est tout.” 
+_Richard Feynman_
+
+"Ainsi derniers seront les premiers et les premiers seront les derniers" 
+_Bible, Mathieu 20:16_
+
