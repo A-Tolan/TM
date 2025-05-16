@@ -54,13 +54,13 @@ def plot_solution(u, title, filename):
     plt.title(title)
     plt.legend()
     plt.grid(True)
-    plt.show()
     plt.savefig(filename)
+    plt.show()
     plt.close()
 
 
 # Tracer les deux cas
-plot_solution(u_f1, "Évolution de u(x,t) avec f₁(x) = sin(2πx)","explicite_solution_f1.png")
-plot_solution(u_f2, "Évolution de u(x,t) avec f₂(x) en triangle","explicite_solution_f2.png")
+plot_solution(u_f1, "Schéma explicite : Évolution de u(x,t) avec f₁(x) = sin(2πx)","explicite_solution_f1.png")
+plot_solution(u_f2, "Schéma explicite : Évolution de u(x,t) avec f₂(x) en triangle","explicite_solution_f2.png")
 
 
