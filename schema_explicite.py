@@ -45,7 +45,7 @@ u_f1 = solve_explicit(f1)
 u_f2 = solve_explicit(f2)
 
 # Affichage
-def plot_solution(u, title):
+def plot_solution(u, title, filename):
     plt.figure(figsize=(8,5))
     for n_plot in [0, int(M*0.25), int(M*0.5), int(M*0.75), M]:
         plt.plot(x, u[n_plot, :], label=f't = {t[n_plot]:.3f}')
@@ -55,10 +55,12 @@ def plot_solution(u, title):
     plt.legend()
     plt.grid(True)
     plt.show()
+    plt.savefig(filename)
+    plt.close()
 
 
 # Tracer les deux cas
-plot_solution(u_f1, "Évolution de u(x,t) avec f₁(x) = sin(2πx)")
-plot_solution(u_f2, "Évolution de u(x,t) avec f₂(x) en triangle")
+plot_solution(u_f1, "Évolution de u(x,t) avec f₁(x) = sin(2πx)","explicite_solution_f1.png")
+plot_solution(u_f2, "Évolution de u(x,t) avec f₂(x) en triangle","explicite_solution_f2.png")
 
 

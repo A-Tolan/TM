@@ -36,7 +36,7 @@ u1 = solve_implicit(f1)
 u2 = solve_implicit(f2)
 
 # Affichage
-def plot_solution(u, title):
+def plot_and_save_solution(u, title, filename):
     plt.figure(figsize=(8,5))
     for n_plot in [0, int(M*0.25), int(M*0.5), int(M*0.75), M]:
         plt.plot(x, u[n_plot, :], label=f't = {t[n_plot]:.3f}')
@@ -45,7 +45,8 @@ def plot_solution(u, title):
     plt.ylabel('u(x,t)')
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig(filename)
+    plt.close()
 
-plot_solution(u1, "Schéma implicite – f₁(x) = sin(2πx)")
-plot_solution(u2, "Schéma implicite – f₂(x) en triangle")
+plot_and_save_solution(u1, "Schéma implicite – f₁(x) = sin(2πx)", "implicite_solution_f1.png")
+plot_and_save_solution(u2, "Schéma implicite – f₂(x) en triangle", "implicite_solution_f2.png")

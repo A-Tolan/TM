@@ -13,8 +13,8 @@ D[0, :] = D[-1, :] = 0  # conditions de Dirichlet
 I = np.eye(nx)
 A, B = I - (lambda_/2) * D, I + (lambda_/2) * D
 
-# Fonction pour résoudre et afficher
-def solve_and_plot(f, title):
+# Fonction pour résoudre et sauvegarder
+def solve_and_save(f, title, filename):
     u = np.zeros((nt+1, nx))
     u[0, :] = f(x)
     u[:, 0] = u[:, -1] = 0  # conditions de Dirichlet
@@ -30,8 +30,9 @@ def solve_and_plot(f, title):
     plt.ylabel("u(x,t)")
     plt.legend()
     plt.grid(True)
-    plt.show()
+    plt.savefig(filename)
+    plt.close()
 
 # Résolution pour les deux conditions initiales
-solve_and_plot(lambda x: np.sin(2 * np.pi * x), "Évolution avec Crank-Nicholson (f1(x))")
-solve_and_plot(lambda x: np.where(x < 0.5, 2 * x, 2 * (1 - x)), "Évolution avec Crank-Nicholson (f2(x))")
+solve_and_save(lambda x: np.sin(2 * np.pi * x), "Évolution avec Crank-Nicholson (f1(x))", "crank_evolution_f1.png")
+solve_and_save(lambda x: np.where(x < 0.5, 2 * x, 2 * (1 - x)), "Évolution avec Crank-Nicholson (f2(x))", "crank_evolution_f2.png")
